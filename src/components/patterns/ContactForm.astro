@@ -1,0 +1,18 @@
+---
+import Button from '@/components/ui/form/Button/Button.astro';
+import Icon from '@/components/ui/primitives/Icon/Icon.astro';
+import siteConfig from '@/config/site.config';
+---
+
+<div class="space-y-6 flex flex-col items-center justify-center h-full text-center py-8">
+  <div class="space-y-2">
+    <p class="text-foreground-muted">
+      The quickest way to reach me is via email or the social links on the right.
+    </p>
+  </div>
+
+  <Button href={`mailto:${siteConfig.email}`} class="gap-2">
+    <Icon name="mail" size="sm" />
+    Send an email
+  </Button>
+</div>
