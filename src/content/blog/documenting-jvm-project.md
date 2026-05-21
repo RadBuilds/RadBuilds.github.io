@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "How to document a Java (JVM) project?"
-date:   2018-06-02 11:43:45 +0200
-categories: java jvm documentation asciidoc asciidoctor plant plantuml
+title: 'How to document a Java (JVM) project?'
+description: 'Using AsciiDoctor and PlantUML to generate versioned documentation from text files in a Maven build pipeline.'
+pubDate: '2018-06-02'
+tags: ['java', 'jvm', 'documentation', 'asciidoc', 'plantuml']
 ---
 
 Our documentation usually starts as a copy from some other documentation.

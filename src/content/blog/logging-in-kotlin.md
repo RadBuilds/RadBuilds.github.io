@@ -1,10 +1,9 @@
 ---
-layout: post
-title:  "Logging in Kotlin"
-date:   26.11.2017 19:10:00 +0200
-categories: java, kotlin, logging, slf4j
+title: 'Logging in Kotlin'
+description: 'How to declare loggers idiomatically in Kotlin using companion objects and a SLF4J wrapper library.'
+pubDate: '2017-11-26'
+tags: ['java', 'kotlin', 'logging', 'slf4j']
 ---
-
 
 Hello There!  
 I've been pretty busy lately. Partially, because I'm learning Kotlin in my spare time.  
@@ -12,21 +11,17 @@ I started rewriting one of my coding challenges (maybe I'll write something abou
 __how to instantiate loggers properly?__  
 This may seem stupid, but Kotlin rejects the idea of `static` fields, so you can't really write
 
-{% highlight java %}
-
+```java
     private static final Logger LOG = LoggerFactory.getLogger(SomeClass.class);
-
-{% endhighlight %}
+```
 
 in Kotlin. On the other hand you can use companion objects:
 
-{% highlight kotlin %}
-
+```kotlin
     companion object {
         private val LOG = LoggerFactory.getLogger(TradeValidationEndpoint::class.java)
     }
-
-{% endhighlight %}
+```
 
 But it's not that pretty, right?  
 Especially given the fact that Kotlin tries to be as expressive as possible.

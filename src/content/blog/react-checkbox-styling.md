@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "Why checkbox styling is so hard?"
-date:   2018-04-04 20:20:45 +0200
-categories: react reactjs checkbox styling font-awesome fa
+title: 'Why checkbox styling is so hard?'
+description: 'A step-by-step guide to styling checkboxes with Font Awesome icons in React, for frontend dummies.'
+pubDate: '2018-04-04'
+tags: ['react', 'checkbox', 'styling', 'font-awesome']
 ---
 
 #### I have no bloody idea!

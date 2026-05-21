@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "ZSH on Windows (git bash)"
-date:   2024-12-11 17:43:45 +1300
-categories: bash shell git zsh windows
+title: 'ZSH on Windows (git bash)'
+description: 'Updated guide to installing ZSH in git bash on Windows using MSYS2/pacman, with oh-my-zsh and powerlevel10k.'
+pubDate: '2024-12-11'
+tags: ['bash', 'shell', 'git', 'zsh', 'windows']
 ---
 
 # So... is it really possible?  
@@ -16,7 +16,7 @@ Get the latest [RubyInstaller](https://rubyinstaller.org/downloads/). It will in
 
 
 ## 1. install [msys2](https://www.msys2.org/) and follow [this](https://stackoverflow.com/a/73565205/20691743)
-   2. I didn’t follow it fully - it was hard to copy those files on windows. What worked for me was just copy-pasting things that returned as errors when running the commands below
+   2. I didn't follow it fully - it was hard to copy those files on windows. What worked for me was just copy-pasting things that returned as errors when running the commands below
 
 ## 2. run the following:
 
@@ -109,4 +109,3 @@ compinit
 2. [videos/windows-terminal-powerlevel10k at main · ChristianLempa/videos](https://github.com/christianlempa/videos/tree/main/windows-terminal-powerlevel10k)
 3. [The Only 5 Zsh Plugins You Need](https://catalins.tech/zsh-plugins/)
 4. [Command not found compdef](https://documentation.breadnet.co.uk/kb/mac/command-not-found-compdef/)
-

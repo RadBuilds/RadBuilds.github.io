@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "Feign, Circuit breakers and Spring in 2020"
-date:   2020-11-24 17:43:45 +1300
-categories: java jvm spring hystrix resilience4j
+title: 'Feign, Circuit breakers and Spring in 2020'
+description: 'How to use resilience4j-spring-boot2 with spring-cloud-feign for circuit breaking, retries, and centralised logging.'
+pubDate: '2020-11-24'
+tags: ['java', 'jvm', 'spring', 'hystrix', 'resilience4j']
 ---
 
 it's been awhile... but without further ado - let's just get into it.
@@ -263,7 +263,7 @@ So try to explore those actuator endpoints, below I'll just give you some basic 
         {
             "circuitBreakerName": "FailingClient",
             "type": "STATE_TRANSITION",
-            "creationTime": "2020-11-25T17:30:26.786452+13:00[Pacific/Auckland]",
+            "creationTime": "2020-11-25T17:30:26.786061+13:00[Pacific/Auckland]",
             "errorMessage": null,
             "durationInMs": null,
             "stateTransition": "CLOSED_TO_OPEN"
