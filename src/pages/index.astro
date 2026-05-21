@@ -9,6 +9,7 @@ import BlogCard from '@/components/blog/BlogCard.astro';
 import LighthouseScores from '@/components/landing/LighthouseScores.astro';
 import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 import { getCollection } from 'astro:content';
+import { getPostSlug } from '@/lib/blog';
 import siteConfig from '@/config/site.config';
 
 const projectItems = await getCollection('projects');
@@ -332,7 +333,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <BlogCard
             title={post.data.title}
             description={post.data.description}
-            href={`/blog/${post.id.replace('en/', '')}`}
+            href={`/blog/${getPostSlug(post.id)}`}
             publishedAt={post.data.publishedAt}
             tags={post.data.tags}
             author={post.data.author}

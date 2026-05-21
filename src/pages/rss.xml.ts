@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { getPostSlug } from '@/lib/blog';
 import type { APIContext } from 'astro';
 import siteConfig from '@/config/site.config';
 
@@ -33,7 +34,7 @@ export async function GET(context: APIContext) {
   );
 
   // Generate slug from post id (remove 'en/' prefix)
-  const getSlug = (id: string) => id.replace('en/', '');
+  const getSlug = (id: string) => getPostSlug(id);
 
   const site = context.site?.toString() ?? siteConfig.url;
   const siteUrl = site.endsWith('/') ? site.slice(0, -1) : site;

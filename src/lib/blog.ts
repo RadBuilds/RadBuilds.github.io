@@ -36,7 +36,7 @@ export function findTagBySlug(slug: string, allTags: string[]): string | undefin
  * (e.g. "en/welcome" → "welcome").
  */
 export function getPostSlug(postId: string, locale = 'en'): string {
-  return postId.replace(new RegExp(`^${locale}/`), '');
+  return postId.replace(new RegExp(`^${locale}/`), '').replace(/\/index$/, '');
 }
 
 /** URL path for an individual blog post. */

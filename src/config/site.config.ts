@@ -122,20 +122,20 @@ export interface SiteConfig {
 const siteConfig: SiteConfig = {
   name: 'RadBuilds',
   description:
-    'Yet another blog about programming...',
+    'Yet another blog about technology',
   url: SITE_URL || 'https://radbuilds.github.io',
   ogImage: '/og-default.svg',
   author: 'Radosław Domański',
-  email: 'radoslaw.domanski@gmail.com',
+  email: 'radoslawjdomanski@gmail.com',
   socialLinks: [
-    'https://github.com/RadBuilds',
     'https://www.linkedin.com/in/radoslaw-domanski/',
+    'https://github.com/RadBuilds',
   ],
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
     bing: BING_SITE_VERIFICATION,
   },
-  authorImage: '/avatar.svg',
+  authorImage: '/avatar.jpg',
   blogImageOverlay: true,
   articleFeatures: {
     toc: {
@@ -173,7 +173,7 @@ const siteConfig: SiteConfig = {
       svg: '/favicon.svg',
     },
     colors: {
-      themeColor: '#3b82f6',
+      themeColor: '#14b8a6',
       backgroundColor: '#ffffff',
     },
   },

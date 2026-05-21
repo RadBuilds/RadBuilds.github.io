@@ -6,7 +6,6 @@ import SEO from '@/components/seo/SEO.astro';
 import JsonLd from '@/components/seo/JsonLd.astro';
 import Analytics from '@/components/layout/Analytics.astro';
 import ConsentBanner from '@/components/ui/overlay/ConsentBanner';
-import CursorTrail from '@/components/effects/CursorTrail.astro';
 import { createWebsiteSchema, createOrganizationSchema, createPersonSchema, createProfessionalServiceSchema } from '@/lib/schema';
 import type { Thing, WithContext } from 'schema-dts';
 import siteConfig from '@/config/site.config';
@@ -64,7 +63,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang={locale} class="scroll-smooth dark" data-theme="blue" data-theme-mode="system">
+<html lang={locale} class="scroll-smooth dark" data-theme="teal" data-theme-mode="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -93,9 +92,6 @@ const locale = getLocaleFromPath(Astro.url.pathname);
       noindex={noindex}
       nofollow={nofollow}
     />
-
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href="/rss.xml" />
 
     <!-- JSON-LD Structured Data -->
     <JsonLd schema={schemas} />
@@ -162,7 +158,6 @@ const locale = getLocaleFromPath(Astro.url.pathname);
          When mode === 'system', <html>.dark tracks prefers-color-scheme live. -->
     <script is:inline>
       (function () {
-        const COLOR_THEMES = ['orange', 'amber', 'lime', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'magenta'];
         const VALID_MODES = ['system', 'light', 'dark'];
 
         function getMode() {
@@ -183,22 +178,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
           else el.classList.remove('dark');
         }
 
-        function applyColorTheme(el) {
-          try {
-            // Color palette — sessionStorage so it resets to default on each new visit
-            const saved = sessionStorage.getItem('color-theme');
-            if (saved && COLOR_THEMES.indexOf(saved) !== -1) {
-              el.setAttribute('data-theme', saved);
-            }
-          } catch { /* ignored */ }
-        }
-
-        function applyTheme(el) {
-          applyMode(el);
-          applyColorTheme(el);
-        }
-
-        applyTheme(document.documentElement);
+        applyMode(document.documentElement);
 
         if (!window.__themeListenersInit) {
           window.__themeListenersInit = true;
@@ -213,10 +193,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 
           // Re-apply across Astro view transitions (no flash on swap).
           document.addEventListener('astro:before-swap', function (e) {
-            applyTheme(e.newDocument.documentElement);
+            applyMode(e.newDocument.documentElement);
           });
           document.addEventListener('astro:after-swap', function () {
-            applyTheme(document.documentElement);
+            applyMode(document.documentElement);
           });
         }
       })();
@@ -241,8 +221,6 @@ const locale = getLocaleFromPath(Astro.url.pathname);
     <slot name="footer" />
 
     <ConsentBanner />
-
-    <CursorTrail />
 
     <!-- Back to top button -->
     <button
