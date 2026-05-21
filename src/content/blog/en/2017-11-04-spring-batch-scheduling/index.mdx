@@ -3,18 +3,20 @@ title: 'Scheduling stuff in Spring Batch'
 description: 'How to schedule a Spring Batch job using @Scheduled with externally configurable cron expressions.'
 publishedAt: 2017-11-04
 tags: ['java', 'spring', 'cron']
+image: ./spring-hero.png
+imageAlt: 'Ugly Spring code'
 author: "Radosław Domański"
 featured: false
 locale: en
 ---
 
-#### So I needed to schedule something in Spring. 
-A batch job, but it's not that important. And I needed it to be externally configurable  
-So I started googling around, because this is what devs do 90% of the time anyway. Just this time it was not about cats or weird geeky/science things.  
-It turns out that there are numbers of people who enjoy making their life difficult. For example  [this][example1] solution  
+#### So I needed to schedule something in Spring.
+A batch job, but it's not that important. And I needed it to be externally configurable
+So I started googling around, because this is what devs do 90% of the time anyway. Just this time it was not about cats or weird geeky/science things.
+It turns out that there are numbers of people who enjoy making their life difficult. For example  [this][example1] solution
 And it's one of the recent ones (2016). Check out some older ones. There are literally hundreds of them (like [this][example2] (2013) and [that][example3] (2015))
 
-So I decided that there must be a better way to do that... In [Spring docs][docs] you can find that there is an annotation called `@Scheduled` and it even takes a cron-like 
+So I decided that there must be a better way to do that... In [Spring docs][docs] you can find that there is an annotation called `@Scheduled` and it even takes a cron-like
 expression as an argument.
 
 ```java
@@ -24,10 +26,10 @@ expression as an argument.
     }
 ```
 
-So far so good... This means that my super-complicated method will be executed once every 15 seconds.  
+So far so good... This means that my super-complicated method will be executed once every 15 seconds.
 
-#### But what about configuration? 
-So if you paid any attention to your [education][docs2] you must know that...  
+#### But what about configuration?
+So if you paid any attention to your [education][docs2] you must know that...
 
 ```java
     @Scheduled(cron = "${myapp.test-cron-scheduler}")
@@ -45,10 +47,10 @@ You can get any property with `${...}` syntax, so lets see if that works after m
     2017-11-03T17:19:30.001
 ```
 
-#### tadaaaam. 
+#### tadaaaam.
 wasn't that hard, was it?
 
-ok, but we didn't run any batch job just yet, right?  
+ok, but we didn't run any batch job just yet, right?
 right. but there is any easy way to do that also:
 
 1. inject a `JobOperator`
@@ -62,11 +64,11 @@ so my scheduler looks like that:
     @Configuration
     public class Bla {
         private final JobOperator jobOperator;
-    
+
         public Bla(JobOperator jobOperator) {
             this.jobOperator = jobOperator;
         }
-      
+
         @Scheduled(cron = "${myapp.test-cron-scheduler}")
         public void justATestScheduledMethod() throws JobExecutionException {
             Long jobExecutionId = jobOperator.startNextInstance("printTimeJob");
@@ -109,16 +111,16 @@ the output is a little bit more messed up...
 17:39:10.188 INFO  org.springframework.batch.core.launch.support.SimpleJobLauncher - Job: [FlowJob: [name=printTimeJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
 ```
 
-and we have some extra time consumed by the framework...  
-check millies in printed time. 01-10 vs 60 - 156 
+and we have some extra time consumed by the framework...
+check millies in printed time. 01-10 vs 60 - 156
 
 but in the end... it's more or less what we expected.
 
-#### so... that's it.  
-I hope that you guys enjoyed.  
+#### so... that's it.
+I hope that you guys enjoyed.
 see you next time and until then - `happy coding!`
 
-## PS. one more thing!  
+## PS. one more thing!
 don't forget to use those somewhere in your configuration:
 
 ```java

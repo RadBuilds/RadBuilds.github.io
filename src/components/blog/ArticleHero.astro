@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import { formatDate } from '@/lib/utils';
-import siteConfig from '@/config/site.config';
 import BlogImageSVG from '@/components/blog/BlogImageSVG.astro';
+import AuthorAvatar from '@/components/blog/AuthorAvatar.astro';
 
 interface Props {
   title: string;
@@ -62,10 +62,7 @@ const readingTime = Math.max(1, Math.ceil(estimatedWords / wordsPerMinute));
     <div class="flex flex-wrap items-center gap-[var(--space-stack-lg)] text-sm text-foreground-muted">
       <!-- Author -->
       <div class="flex items-center gap-3">
-        {siteConfig.authorImage
-          ? <img src={siteConfig.authorImage} alt={author} class="h-9 w-9 rounded-full object-cover" />
-          : <span class="h-9 w-9 rounded-full bg-brand-500 flex items-center justify-center text-sm font-semibold text-white">{author.charAt(0).toUpperCase()}</span>
-        }
+        <AuthorAvatar author={author} />
         <p class="font-semibold text-foreground">{author}</p>
       </div>
 
