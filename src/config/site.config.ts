@@ -126,7 +126,7 @@ const siteConfig: SiteConfig = {
   url: SITE_URL || 'https://radbuilds.github.io',
   ogImage: '/og-default.svg',
   author: 'Radosław Domański',
-  email: 'radoslawjdomanski@gmail.com',
+  email: 'contact@radbuilds.eu',
   socialLinks: [
     'https://www.linkedin.com/in/radoslaw-domanski/',
     'https://github.com/RadBuilds',
