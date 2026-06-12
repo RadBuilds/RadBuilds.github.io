@@ -1,6 +1,6 @@
 {
-  "question": "What is Astro Rocket?",
-  "answer": "Astro Rocket is a free, open-source website theme built on Astro 6 and Tailwind CSS v4. It includes a full component library, a blog with MDX support, built-in dark mode, SEO, and everything else you need to ship a fast, modern website without starting from scratch.",
+  "question": "What is a fractional CTO?",
+  "answer": "A fractional CTO is a senior technical leader who works with your company part-time or on a fixed engagement — giving you CTO-level thinking without the full-time cost. Ideal for startups that have raised seed funding and need technical leadership, but aren't ready for a full-time hire.",
   "category": "general",
   "order": 1,
   "locale": "en"

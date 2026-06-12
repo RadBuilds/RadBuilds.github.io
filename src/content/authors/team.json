@@ -1,9 +1,8 @@
 {
-  "name": "Astro Rocket",
-  "bio": "Astro Rocket is a free, open-source Astro 6 starter theme. Built for speed, accessibility, and developer experience — clone it and start shipping.",
+  "name": "Radosław Domański",
+  "bio": "Fractional CTO helping early-stage startups and scale-ups build the right thing — before they've hired a full-time CTO. 15+ years from developer to tech lead to CTO.",
   "social": {
-    "github": "https://github.com",
-    "linkedin": "https://linkedin.com",
-    "twitter": "https://x.com"
+    "github": "https://github.com/RadBuilds",
+    "linkedin": "https://www.linkedin.com/in/radoslaw-domanski/"
   }
 }

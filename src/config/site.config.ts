@@ -167,10 +167,10 @@ const siteConfig: SiteConfig = {
   branding: {
     logo: {
       alt: 'RadBuilds',
-      imageUrl: '/favicon.svg',
+      imageUrl: '/logo.png',
     },
     favicon: {
-      svg: '/favicon.svg',
+      svg: '/logo.png',
     },
     colors: {
       themeColor: '#14b8a6',

@@ -76,6 +76,6 @@
   },
   "footer": {
     "copyright": "© {year} {name}. All rights reserved.",
-    "builtWith": "Built with Astro Rocket"
+    "builtWith": "Built with Astro"
   }
 }

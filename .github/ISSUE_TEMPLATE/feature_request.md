@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest a new component, page, or improvement for Astro Rocket
+about: Suggest a new component, page, or improvement for this site
 title: "[Feature] "
 labels: enhancement
 assignees: ''
