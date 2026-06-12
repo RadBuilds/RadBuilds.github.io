@@ -1,0 +1,152 @@
+---
+---
+
+<canvas
+  data-hero-network
+  class="absolute inset-0 w-full h-full pointer-events-none z-0"
+  aria-hidden="true"
+></canvas>
+
+<script>
+  interface NetworkNode {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    r: number;
+  }
+
+  function sampleBrandRgb(): [number, number, number] {
+    try {
+      const offscreen = document.createElement('canvas');
+      offscreen.width = 1;
+      offscreen.height = 1;
+      const offCtx = offscreen.getContext('2d')!;
+      const raw = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color-brand-500')
+        .trim();
+      offCtx.fillStyle = raw;
+      offCtx.fillRect(0, 0, 1, 1);
+      const d = offCtx.getImageData(0, 0, 1, 1).data;
+      return [d[0], d[1], d[2]];
+    } catch {
+      return [74, 222, 128];
+    }
+  }
+
+  function initNetwork(canvas: HTMLCanvasElement) {
+    const rawCtx = canvas.getContext('2d');
+    if (!rawCtx) return;
+    const ctx = rawCtx;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = () => window.innerWidth < 768;
+
+    const NODE_COUNT = isMobile() ? 35 : 70;
+    const CONNECT_DIST = isMobile() ? 110 : 155;
+    const SPEED = 0.3;
+
+    let brand = sampleBrandRgb();
+    let nodes: NetworkNode[] = [];
+    let rafId = 0;
+    let running = true;
+
+    function resize() {
+      const parent = canvas.parentElement!;
+      canvas.width = parent.offsetWidth;
+      canvas.height = parent.offsetHeight;
+    }
+
+    function makeNodes(): NetworkNode[] {
+      return Array.from({ length: NODE_COUNT }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * SPEED * 2,
+        vy: (Math.random() - 0.5) * SPEED * 2,
+        r: Math.random() * 1.5 + 1,
+      }));
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const [r, g, b] = brand;
+
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < CONNECT_DIST) {
+            const alpha = (1 - dist / CONNECT_DIST) * 0.18;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
+            ctx.lineWidth = 0.8;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      for (const node of nodes) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${r},${g},${b},0.55)`;
+        ctx.fill();
+      }
+    }
+
+    function tick() {
+      if (!running) return;
+      for (const node of nodes) {
+        node.x += node.vx;
+        node.y += node.vy;
+        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+      }
+      draw();
+      rafId = requestAnimationFrame(tick);
+    }
+
+    function destroy() {
+      running = false;
+      cancelAnimationFrame(rafId);
+      ro.disconnect();
+      mutObs.disconnect();
+    }
+
+    const ro = new ResizeObserver(() => {
+      resize();
+      nodes = makeNodes();
+      if (prefersReduced) draw();
+    });
+    ro.observe(canvas.parentElement!);
+
+    // Re-sample brand color when theme changes
+    const mutObs = new MutationObserver(() => {
+      brand = sampleBrandRgb();
+    });
+    mutObs.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme', 'data-appearance'],
+    });
+
+    document.addEventListener('astro:before-swap', destroy, { once: true });
+
+    resize();
+    nodes = makeNodes();
+
+    if (prefersReduced) {
+      draw();
+    } else {
+      tick();
+    }
+  }
+
+  function boot() {
+    document.querySelectorAll<HTMLCanvasElement>('[data-hero-network]').forEach(initNetwork);
+  }
+
+  boot();
+  document.addEventListener('astro:page-load', boot);
+</script>

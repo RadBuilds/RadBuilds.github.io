@@ -2,6 +2,7 @@
 import type { HTMLAttributes } from 'astro/types';
 import { cn } from '@/lib/cn';
 import { heroSectionVariants } from './hero.variants';
+import HeroNetworkCanvas from './HeroNetworkCanvas.astro';
 
 interface Props extends HTMLAttributes<'section'> {
   /** Layout mode: centered single column or split two-column */
@@ -20,6 +21,8 @@ interface Props extends HTMLAttributes<'section'> {
   bottomFade?: boolean;
   /** Show an animated scroll indicator at the bottom (desktop only, hides on scroll) */
   showScrollIndicator?: boolean;
+  /** Show animated network/nodes canvas background */
+  showNetworkCanvas?: boolean;
 }
 
 const {
@@ -31,6 +34,7 @@ const {
   showGlow = false,
   bottomFade = false,
   showScrollIndicator = false,
+  showNetworkCanvas = false,
   class: className,
   ...attrs
 } = Astro.props;
@@ -60,6 +64,8 @@ const gridClasses = cn(
 ---
 
 <section class={sectionClasses} {...attrs}>
+  {showNetworkCanvas && <HeroNetworkCanvas />}
+
   {showGrid && (
     <div
       class="bg-grid-pattern pointer-events-none absolute inset-x-0 -inset-y-[20%] opacity-30 hidden md:dark:block"

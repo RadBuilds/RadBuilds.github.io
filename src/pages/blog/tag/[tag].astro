@@ -46,7 +46,7 @@ const { tag, posts, visibleTags } = Astro.props;
   description={`Posts tagged "${tag}".`}
   eagerReveal
 >
-  <Hero layout="centered" size="sm">
+  <Hero layout="centered" size="sm" showNetworkCanvas>
     <Badge slot="badge" variant="brand" pill>
       <Icon name="tag" size="sm" />
       Tag

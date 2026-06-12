@@ -323,15 +323,23 @@
     );
   }
 
-  /* Hero gradient — dark mode */
+  /* Hero gradient — subtle brand halo, canvas provides the main visual interest */
   .dark .hero-dark-gradient {
-    background: linear-gradient(to bottom, var(--color-brand-500) 0%, #000 100%);
+    background: radial-gradient(
+      ellipse 75% 55% at 50% 0%,
+      color-mix(in oklch, var(--color-brand-500) 18%, #020202) 0%,
+      #020202 65%
+    );
   }
 
   .hero-dark-gradient {
     position: relative;
     isolation: isolate;
-    background: linear-gradient(to bottom, var(--color-brand-500) 0%, #000 100%);
+    background: radial-gradient(
+      ellipse 75% 55% at 50% 0%,
+      color-mix(in oklch, var(--color-brand-500) 18%, #020202) 0%,
+      #020202 65%
+    );
   }
   html:not(.dark) .hero-dark-gradient {
     --color-foreground:           oklch(91% 0.008 250);
