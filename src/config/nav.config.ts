@@ -28,15 +28,17 @@ export interface LegalLink {
 export const navItems: NavItem[] = [
   { label: 'About', href: '/about', order: 1 },
   { label: 'Services', href: '/services', order: 2 },
-  { label: 'Contact', href: '/contact', order: 3 },
-  { label: 'Blog', href: '/blog', order: 4 },
+  { label: 'Projects', href: '/projects', order: 3 },
+  { label: 'Contact', href: '/contact', order: 4 },
+  { label: 'Blog', href: '/blog', order: 5 },
 ];
 
 export const footerNavItems: NavItem[] = [
   { label: 'About', href: '/about', order: 1 },
   { label: 'Services', href: '/services', order: 2 },
-  { label: 'Contact', href: '/contact', order: 3 },
-  { label: 'Blog', href: '/blog', order: 4 },
+  { label: 'Projects', href: '/projects', order: 3 },
+  { label: 'Contact', href: '/contact', order: 4 },
+  { label: 'Blog', href: '/blog', order: 5 },
 ];
 
 export const legalLinks: LegalLink[] = [];

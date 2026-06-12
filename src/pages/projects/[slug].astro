@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const routableProjects = visibleProjects.filter((p) => !p.data.placeholder);
 
   return routableProjects.map((project) => ({
-    params: { slug: project.id.replace(/\.mdx?$/, '') },
+    params: { slug: project.id.replace(/\.mdx?$/, '').replace(/\/index$/, '') },
     props: {
       project,
       related: visibleProjects
