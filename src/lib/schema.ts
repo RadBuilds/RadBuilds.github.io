@@ -24,22 +24,20 @@ export function createWebsiteSchema(): WithContext<WebSite> {
 }
 
 /**
- * Create Person schema for Astro Rocket
+ * Create Person schema
  */
 export function createPersonSchema(): WithContext<Person> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Astro Rocket',
-    jobTitle: 'Web Designer & Developer',
+    name: siteConfig.author,
+    jobTitle: 'Fractional CTO',
     url: siteConfig.url,
     email: siteConfig.email,
     ...(siteConfig.authorImage ? { image: `${siteConfig.url}${siteConfig.authorImage}` } : {}),
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Veghel',
-      addressRegion: 'Noord-Brabant',
-      addressCountry: 'NL',
+      addressCountry: 'PL',
     },
     sameAs: siteConfig.socialLinks,
   };
@@ -59,12 +57,10 @@ export function createProfessionalServiceSchema(): WithContext<LocalBusiness> {
     ...(siteConfig.authorImage ? { image: `${siteConfig.url}${siteConfig.authorImage}` } : {}),
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Veghel',
-      addressRegion: 'Noord-Brabant',
-      addressCountry: 'NL',
+      addressCountry: 'PL',
     },
     areaServed: [
-      { '@type': 'Country', name: 'Netherlands' },
+      { '@type': 'Country', name: 'Poland' },
       { '@type': 'Country', name: 'Worldwide' },
     ],
     sameAs: siteConfig.socialLinks,

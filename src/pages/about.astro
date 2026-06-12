@@ -15,7 +15,7 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 ---
 <PageLayout
   title="About Radosław Domański — Fractional CTO"
-  description="15+ years from developer to CTO, across fintech, AI, and scale-ups. Fractional CTO for late-stage startups and early scale-ups."
+  description="15+ years from developer to CTO, across fintech, AI, and scale-ups. Fractional CTO for early-stage startups and scale-ups."
 >
   <Hero layout="centered" size="sm">
     <Badge slot="badge" variant="brand" pill>
@@ -30,8 +30,8 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
     </h1>
 
     <p slot="description">
-      15+ years from developer to CTO, across fintech, AI, and scale-ups.
-      I help founders build the right thing — before the wrong decisions compound.
+      15+ years from developer to CTO across fintech, AI, and scale-ups.
+      Here's how I think, who I work with, and what I actually do.
     </p>
   </Hero>
 
@@ -67,7 +67,7 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
                 <p class="text-xs font-bold tracking-wide text-foreground-muted mb-1">Good fit</p>
                 <ul class="flex flex-col gap-1.5 mt-1">
                   <li class="text-sm text-foreground-muted">Seed-stage or post-Series A company</li>
-                  <li class="text-sm text-foreground-muted">No full-time CTO in seat yet (or the CTO needs a smart rubber duck)</li>
+                  <li class="text-sm text-foreground-muted">No full-time CTO in seat yet</li>
                   <li class="text-sm text-foreground-muted">A few engineers, initial stages of the product</li>
                   <li class="text-sm text-foreground-muted">Decisions starting to back up</li>
                   <li class="text-sm text-foreground-muted">Poland / EU (US possible)</li>
@@ -96,55 +96,16 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 
   <!-- Engagement model -->
   <section class="py-[var(--space-section-md)] bg-background border-t border-border">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="mb-8 text-center flex flex-col items-center gap-4" data-reveal>
-        <div class="flex flex-col items-center gap-6">
-          <Badge variant="brand" pill>How I engage</Badge>
-          <h2 class="font-display text-4xl font-bold text-foreground">
-            Two-step motion
-          </h2>
-        </div>
-        <p class="text-lg text-foreground-muted max-w-2xl mx-auto text-balance">
-          Every engagement starts with a short diagnostic sprint. If it makes sense, we continue on a retainer.
-          If the diagnosis is all you need — you still leave with a clear picture of your tech.
-        </p>
-      </div>
-      <div class="grid gap-8 lg:grid-cols-2">
-        <Card hover data-reveal>
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="search" size="md" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Technical Diagnostic Sprint</h3>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                Two weeks. Fixed scope and price. Covers architecture, codebase health, delivery practices, team setup, and security posture.
-                Delivers a prioritised 90-day action plan.
-              </p>
-            </div>
-          </div>
-        </Card>
-        <Card hover data-reveal data-reveal-delay="1">
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="repeat" size="md" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Ongoing Retainer</h3>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                1–3 days per week depending on what the situation needs. Strategic direction, delivery rhythm, hiring, team coaching.
-                Minimum 3 months.
-              </p>
-            </div>
-          </div>
-        </Card>
-      </div>
-      <div class="mt-8 flex justify-center" data-reveal>
-        <Button variant="outline" href="/services">
-          Full engagement details
-          <Icon name="arrow-right" size="sm" />
-        </Button>
-      </div>
+    <div class="mx-auto max-w-6xl px-6 flex flex-col items-center gap-6 text-center" data-reveal>
+      <Badge variant="brand" pill>How I engage</Badge>
+      <p class="text-lg text-foreground-muted max-w-2xl text-balance">
+        Every engagement starts with a two-week Technical Diagnostic Sprint — fixed scope, fixed price, prioritised action plan as output.
+        From there, most continue on an ongoing retainer shaped around what the company actually needs.
+      </p>
+      <Button variant="outline" href="/services">
+        Full engagement details
+        <Icon name="arrow-right" size="sm" />
+      </Button>
     </div>
   </section>
 
@@ -225,7 +186,7 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
         Sound like a good fit?
       </h2>
       <p class="text-lg text-foreground-muted mb-8 text-balance">
-        Start with a 30-minute call — no pitch, just a conversation about your situation.
+        Start with a 30-minute call. No pitch — just a conversation about your situation.
       </p>
       <Button size="lg" href="/contact" class="cta-btn-brand">
         Book a discovery call
@@ -238,7 +199,7 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
         Sound like a good fit?
       </h2>
       <p class="text-lg text-foreground-muted mb-8 text-balance">
-        Start with a 30-minute call — no pitch, just a conversation about your situation.
+        Start with a 30-minute call. No pitch — just a conversation about your situation.
       </p>
       <Button size="lg" href="/contact" class="hero-btn-brand">
         Book a discovery call

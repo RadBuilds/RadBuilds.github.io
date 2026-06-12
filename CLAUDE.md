@@ -111,7 +111,7 @@ and early scale-ups (seed done, 3–10 engineers, no full-time CTO yet).
 
 ### Positioning (settled)
 
-- **One-liner:** "I help late-stage startups and early scale-ups build the right thing — before they've hired a full-time CTO."
+- **One-liner:** "I help early-stage startups and scale-ups build the right thing — before they've hired a full-time CTO."
 - **Entry motion:** Technical Diagnostic Sprint (2 weeks, fixed scope and price)
 - **Follow-on:** Ongoing retainer in three tiers (Strategic 1d/wk, Active 2d/wk, Embedded 3d/wk) — **no prices on the site**
 - **Contact:** contact@radbuilds.eu
