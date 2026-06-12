@@ -45,6 +45,17 @@ const iconMap: Record<string, string> = {
   'brand-react':      'simple-icons:react',
   'brand-mdx':        'simple-icons:mdx',
   'brand-claude':     'simple-icons:anthropic',
+  'brand-node':       'simple-icons:nodedotjs',
+  'brand-python':     'simple-icons:python',
+  'brand-azure':      'simple-icons:microsoftazure',
+  'brand-openai':     'simple-icons:openai',
+  'brand-aws':        'simple-icons:amazonwebservices',
+  'brand-java':       'simple-icons:kotlin',
+  'brand-rust':       'simple-icons:rust',
+  'brand-bitcoin':    'simple-icons:bitcoin',
+  'brand-solana':     'simple-icons:solana',
+  'brand-docker':     'simple-icons:docker',
+  'brand-postgres':   'simple-icons:postgresql',
 };
 
 export function Icon({

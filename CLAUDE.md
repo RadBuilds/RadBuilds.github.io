@@ -90,3 +90,60 @@ Schema generators are in `src/lib/schema.ts`. Pass schema objects to `BaseLayout
 - `CursorTrail` — canvas cursor effect, enabled in BaseLayout
 - Reveal animations — `data-reveal` attribute triggers fade-in via IntersectionObserver in BaseLayout
 - Stagger index — set `--stagger-index` CSS var on elements to control animation order
+
+---
+
+## Owner & Positioning Context
+
+This site belongs to **Radosław Domański** (Radek), a fractional CTO based in Poland.
+
+### Who he is
+
+15+ years from developer to tech lead to CTO, across telco, insurance, fintech, blockchain, and AI.
+Not a stack specialist — a systems thinker. Breadth is the differentiator.
+
+### What this site is for
+
+Marketing site for his fractional CTO practice. Target audience: founders of late-stage startups
+and early scale-ups (seed done, 3–10 engineers, no full-time CTO yet).
+
+**Not** a personal blog or portfolio site — the blog supports thought leadership for the fCTO practice.
+
+### Positioning (settled)
+
+- **One-liner:** "I help late-stage startups and early scale-ups build the right thing — before they've hired a full-time CTO."
+- **Entry motion:** Technical Diagnostic Sprint (2 weeks, fixed scope and price)
+- **Follow-on:** Ongoing retainer in three tiers (Strategic 1d/wk, Active 2d/wk, Embedded 3d/wk) — **no prices on the site**
+- **Contact:** contact@radbuilds.eu
+
+### Tech stack (his actual background)
+
+TypeScript, Node.js, React, AWS, AI tooling (LangChain, ElevenLabs, Azure AI Foundry, OpenAI).
+
+Proof points from real engagements:
+- MonedaPay: DORA/MICA/Travel Rule compliance — architecture + legal + AML + development in parallel
+- Evalyn: voice-based AI recruitment SaaS (ElevenLabs, Azure OpenAI, LangChain) from zero to multi-tenant
+- Sonnar (NZ): delivery practices overhaul, enabling team to do more with fewer engineers
+
+### Content rules
+
+- No prices in copy — link to contact for pricing conversations
+- Geography: Poland primary, EU secondary
+- Voice: direct, no hype, no buzzwords. "Build the right thing" is the frame.
+
+### Full fCTO context (for deeper questions)
+
+The complete fCTO knowledge base lives in Radek's Obsidian vault. If you need more detail
+than this file provides — positioning decisions, offer specifics, pipeline status, content drafts —
+read these files directly:
+
+| Need | File |
+|------|------|
+| Full positioning doc | `/Users/radek/work/knowledge-centre/domains/work/fCTO/positioning/positioning.md` |
+| Full offer doc (scope, process, tiers) | `/Users/radek/work/knowledge-centre/domains/work/fCTO/positioning/offer.md` |
+| Curated memory (decisions, pipeline, commitments) | `/Users/radek/work/knowledge-centre/_bmad/memory/chat-cto/MEMORY.md` |
+| Roadmap & current phase | `/Users/radek/work/knowledge-centre/domains/work/fCTO/roadmap/roadmap.md` |
+
+The fCTO agent (Forge / ChatCTO) owns that vault. If you're making copy or structural changes to
+this site and need strategic alignment, check those files or note the question for Radek to resolve
+with Forge in a separate session.

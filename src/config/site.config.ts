@@ -122,7 +122,7 @@ export interface SiteConfig {
 const siteConfig: SiteConfig = {
   name: 'RadBuilds',
   description:
-    'Yet another blog about technology',
+    'Fractional CTO for late-stage startups and early scale-ups. Technical leadership, architecture, and delivery — without the full-time hire.',
   url: SITE_URL || 'https://radbuilds.github.io',
   ogImage: '/og-default.svg',
   author: 'Radosław Domański',

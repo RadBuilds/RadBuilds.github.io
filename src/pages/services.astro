@@ -12,8 +12,8 @@ import { Hero } from '@/components/hero';
 import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 ---
 <PageLayout
-  title="Services — Web Design, Development & Performance"
-  description="Three core services for modern websites: thoughtful design, clean Astro development, and measurable performance & SEO."
+  title="Services — Fractional CTO | RadBuilds"
+  description="Two ways to engage: a fixed-scope Technical Diagnostic Sprint, or ongoing fractional CTO support across three commitment tiers."
 >
   <Hero layout="centered" size="sm">
     <Badge slot="badge" variant="brand" pill>
@@ -22,287 +22,315 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
     </Badge>
     <h1 slot="title">
       <span class="text-foreground">What I offer —</span><br />
-      <span class="text-brand-500">designed, built, and tuned.</span>
+      <span class="text-brand-500">two ways to engage.</span>
     </h1>
 
     <p slot="description">
-      Three core services, one consistent standard. From the first
-      wireframe to the final Lighthouse score, every project gets the
-      same attention to detail.
+      Every engagement starts with a short, defined diagnostic. If it makes sense to continue,
+      we move to an ongoing retainer — the scope shaped around what your company actually needs.
     </p>
 
     <Fragment slot="actions">
-      <Button variant="outline" href="#design">
-        Web Design
+      <Button variant="outline" href="#diagnostic">
+        Diagnostic Sprint
         <Icon name="arrow-down" size="sm" />
       </Button>
-      <Button variant="outline" href="#development">
-        Development
-        <Icon name="arrow-down" size="sm" />
-      </Button>
-      <Button variant="outline" href="#performance">
-        SEO & Performance
+      <Button variant="outline" href="#retainer">
+        Ongoing Retainer
         <Icon name="arrow-down" size="sm" />
       </Button>
     </Fragment>
   </Hero>
 
-  <!-- Design -->
-  <section id="design" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+  <!-- Diagnostic Sprint -->
+  <section id="diagnostic" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid gap-12 lg:grid-cols-2">
         <!-- Text -->
         <div class="flex flex-col justify-center gap-4" data-reveal="right" data-reveal-ease="smooth">
           <Badge variant="brand" pill class="self-start">
-            <Icon name="layout" size="sm" />
-            Web Design
+            <Icon name="search" size="sm" />
+            Technical Diagnostic Sprint
           </Badge>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Design with intention
+            Clarity in two weeks
           </h2>
           <p class="text-lg text-foreground-muted leading-relaxed">
-            Great design starts with the people who'll use it. I design layouts shaped around your content and your audience, not around trends that age badly. Typography, spacing, and colour are chosen for clarity — not novelty.
+            A focused two-week assessment of your stack, architecture, delivery practices, and team setup.
+            Fixed scope. Fixed price. A prioritised, specific picture of what's working, what's fragile, and what to fix first.
           </p>
           <p class="text-lg text-foreground-muted leading-relaxed">
-            Every screen is considered: desktop, tablet, and the phone someone holds at the bus stop. The brand stays consistent across the whole experience, and the small details are treated as part of the design, not the polish.
+            Not a generic audit — the output is sequenced for your stage and goals. Most of the time this leads to an ongoing engagement.
+            Sometimes the diagnosis is all you need. Either way, you leave with clarity.
           </p>
           <Button variant="outline" href="/contact" class="self-start mt-2">
-            Discuss a design project
+            Start with a conversation
             <Icon name="arrow-right" size="sm" />
           </Button>
         </div>
-        <!-- Card -->
+        <!-- Card: What's included -->
         <div data-reveal="left" data-reveal-delay="1" data-reveal-ease="smooth">
           <Card variant="elevated" padding="lg" class="h-full flex flex-col justify-center">
             <div class="flex items-center gap-3 pb-4 mb-4 border-b border-border">
               <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-                <Icon name="layout" size="md" />
+                <Icon name="search" size="md" />
               </div>
-              <h3 class="font-display text-base font-semibold text-foreground">What's included</h3>
+              <h3 class="font-display text-base font-semibold text-foreground">What's covered</h3>
             </div>
             <ul class="flex flex-col gap-3">
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Bespoke layouts</span> — built for your content, not from a template. Every section earns its place by serving the page's goal.
+                  <span class="font-semibold text-foreground">Architecture review</span> — current state, scalability risks, key structural decisions and their consequences.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Responsive across breakpoints</span> — phone, tablet, desktop, ultrawide. Layouts reflow with intent, not just shrink to fit.
+                  <span class="font-semibold text-foreground">Codebase health</span> — tech debt hot spots, dependency risks, test coverage reality.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Typography systems</span> — readable, scaleable, on-brand. A clear hierarchy from page title down to caption, tuned for long-form reading.
+                  <span class="font-semibold text-foreground">Delivery practices</span> — how the team actually works, where time is lost, what slows you down.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Light & dark themes</span> — one design, two moods, user's choice. Both modes are checked at every step, not retrofitted at the end.
+                  <span class="font-semibold text-foreground">Team setup</span> — skills mapping, communication patterns, hiring gaps.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Considered motion</span> — interactions that guide, never distract. Reduced-motion preferences are respected without exception.
+                  <span class="font-semibold text-foreground">Security & compliance posture</span> — surface-level flags, not a pentest.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Accessibility baked in</span> — contrast, focus, semantic structure. Keyboard paths and screen-reader output are verified before launch.
+                  <span class="font-semibold text-foreground">90-day action plan</span> — sequenced, specific, realistic for your team size.
                 </p>
               </li>
             </ul>
           </Card>
         </div>
       </div>
+
+      <!-- Deliverables row -->
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-reveal-children>
+        <Card hover>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 font-bold text-base shrink-0">
+              <Icon name="file-text" size="sm" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-sm font-semibold text-foreground">Technical Landscape</h3>
+              <p class="text-xs text-foreground-muted leading-relaxed mt-1">
+                Current state, architecture diagram, and key risks — documented.
+              </p>
+            </div>
+          </div>
+        </Card>
+        <Card hover>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="alert-triangle" size="sm" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-sm font-semibold text-foreground">Risk Register</h3>
+              <p class="text-xs text-foreground-muted leading-relaxed mt-1">
+                Prioritised list of what could hurt you and when.
+              </p>
+            </div>
+          </div>
+        </Card>
+        <Card hover>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="list-ordered" size="sm" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-sm font-semibold text-foreground">90-Day Action Plan</h3>
+              <p class="text-xs text-foreground-muted leading-relaxed mt-1">
+                Sequenced next steps, scoped to your team size and pace.
+              </p>
+            </div>
+          </div>
+        </Card>
+        <Card hover>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="presentation" size="sm" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-sm font-semibold text-foreground">Readout Session</h3>
+              <p class="text-xs text-foreground-muted leading-relaxed mt-1">
+                90-min live walkthrough with founder and key team members.
+              </p>
+            </div>
+          </div>
+        </Card>
+      </div>
     </div>
   </section>
 
-  <!-- Development -->
-  <section id="development" class="py-[var(--space-section-md)] bg-background border-t border-border">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="grid gap-12 lg:grid-cols-2">
-        <!-- Text -->
-        <div class="flex flex-col justify-center gap-4 lg:order-2" data-reveal="left" data-reveal-ease="smooth">
-          <Badge variant="brand" pill class="self-start">
-            <Icon name="code" size="sm" />
-            Web Development
+  <!-- Ongoing Retainer -->
+  <section id="retainer" class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col gap-10">
+      <div class="flex flex-col items-center gap-4 text-center" data-reveal>
+        <div class="flex flex-col items-center gap-6">
+          <Badge variant="brand" pill>
+            <Icon name="repeat" size="sm" />
+            Ongoing Retainer
           </Badge>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Code that earns its place
+            Fractional CTO, ongoing
           </h2>
-          <p class="text-lg text-foreground-muted leading-relaxed">
-            I build with Astro because it ships what's needed and nothing else. The result is sites that score well in audits, feel fast in the hand, and don't grow brittle over time.
-          </p>
-          <p class="text-lg text-foreground-muted leading-relaxed">
-            Architecture matters as much as output: typed content, predictable component boundaries, and a build pipeline a future developer (or future you) can pick up without a guided tour.
-          </p>
-          <Button variant="outline" href="/projects" class="self-start mt-2">
-            See recent projects
-            <Icon name="arrow-right" size="sm" />
-          </Button>
         </div>
-        <!-- Card -->
-        <div class="lg:order-1" data-reveal="right" data-reveal-delay="1" data-reveal-ease="smooth">
-          <Card variant="elevated" padding="lg" class="h-full flex flex-col justify-center">
-            <div class="flex items-center gap-3 pb-4 mb-4 border-b border-border">
-              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-                <Icon name="code" size="md" />
-              </div>
-              <h3 class="font-display text-base font-semibold text-foreground">What's included</h3>
-            </div>
-            <ul class="flex flex-col gap-3">
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Astro + Tailwind</span> — modern stack, minimal JavaScript, clean HTML. The browser renders the page almost instantly, with no hydration tax.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Typed content collections</span> — structured blog, projects, and data. Schema validation runs at build time, so broken content never ships.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Forms & integrations</span> — protected, GDPR-aware, hooked into your tools. Submissions reach your inbox or CRM without leaking client-side.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Hosting & deploy</span> — Netlify, Vercel, Cloudflare, or your own infra. Preview deploys for every branch, so changes can be reviewed before they go live.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Version control & CI</span> — git-based workflow, repeatable deploys. Automated checks gate every pull request before merge.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Handover documentation</span> — code, keys, and a README you can actually read. Written so a future developer (or future you) can pick the project up without a tour.
-                </p>
-              </li>
-            </ul>
-          </Card>
-        </div>
+        <p class="text-lg text-foreground-muted max-w-2xl mx-auto text-balance">
+          The diagnostic surfaces the problems — the retainer installs the fixes.
+          Three commitment tiers; the right one depends on how involved your technical situation needs me to be.
+        </p>
       </div>
+
+      <div class="grid gap-6 lg:grid-cols-3" data-reveal-children>
+        <!-- Strategic -->
+        <Card variant="elevated" padding="lg" class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 pb-4 border-b border-border">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="compass" size="md" />
+            </div>
+            <div>
+              <h3 class="font-display text-base font-semibold text-foreground">Strategic</h3>
+              <p class="text-xs text-foreground-muted">1 day / week</p>
+            </div>
+          </div>
+          <p class="text-sm text-foreground-muted leading-relaxed">
+            Best when the team is capable and you mostly need a senior technical voice for direction and sanity-checks.
+          </p>
+          <ul class="flex flex-col gap-2 mt-auto">
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Weekly exec sync</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Architecture decisions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Hiring input</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Async availability</span>
+            </li>
+          </ul>
+        </Card>
+
+        <!-- Active -->
+        <Card variant="elevated" padding="lg" class="flex flex-col gap-4 ring-2 ring-brand-500/30">
+          <div class="flex items-center gap-3 pb-4 border-b border-border">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="activity" size="md" />
+            </div>
+            <div>
+              <h3 class="font-display text-base font-semibold text-foreground">Active</h3>
+              <p class="text-xs text-foreground-muted">2 days / week</p>
+            </div>
+          </div>
+          <p class="text-sm text-foreground-muted leading-relaxed">
+            When delivery is inconsistent, architecture decisions are backing up, or you're hiring and need someone to own the process.
+          </p>
+          <ul class="flex flex-col gap-2 mt-auto">
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Everything in Strategic</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Delivery rhythm ownership</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Sprint reviews</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Team coaching</span>
+            </li>
+          </ul>
+        </Card>
+
+        <!-- Embedded -->
+        <Card variant="elevated" padding="lg" class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 pb-4 border-b border-border">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="layers" size="md" />
+            </div>
+            <div>
+              <h3 class="font-display text-base font-semibold text-foreground">Embedded</h3>
+              <p class="text-xs text-foreground-muted">3 days / week</p>
+            </div>
+          </div>
+          <p class="text-sm text-foreground-muted leading-relaxed">
+            For major transitions: cloud migration, AI integration, regulatory compliance, or scaling from 5 to 15 engineers.
+          </p>
+          <ul class="flex flex-col gap-2 mt-auto">
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Everything in Active</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Deeper hands-on involvement</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Suitable for crunch periods</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-0.5" />
+              <span class="text-xs text-foreground-muted">Rapid scale support</span>
+            </li>
+          </ul>
+        </Card>
+      </div>
+
+      <p class="text-sm text-foreground-muted text-center" data-reveal>
+        Minimum commitment: 3 months. Always includes: async availability (response within business day), monthly strategy session with founder, and written monthly summary of decisions and progress.
+      </p>
     </div>
   </section>
 
-  <!-- Performance -->
-  <section id="performance" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="grid gap-12 lg:grid-cols-2">
-        <!-- Text -->
-        <div class="flex flex-col justify-center gap-4" data-reveal="right" data-reveal-ease="smooth">
-          <Badge variant="brand" pill class="self-start">
-            <Icon name="zap" size="sm" />
-            Performance
-          </Badge>
-          <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Fast pages, found pages
-          </h2>
-          <p class="text-lg text-foreground-muted leading-relaxed">
-            Speed and search visibility aren't features to add at the end — they're constraints to honour from the first commit. Every second a page loads costs attention, ranking, and trust.
-          </p>
-          <p class="text-lg text-foreground-muted leading-relaxed">
-            I work to measurable targets, not vibes. Core Web Vitals, technical SEO, and accessibility are tracked, tuned, and verified before launch — and the dashboards stay yours after handover.
-          </p>
-          <Button variant="outline" href="/contact" class="self-start mt-2">
-            Start a project
-            <Icon name="arrow-right" size="sm" />
-          </Button>
-        </div>
-        <!-- Card -->
-        <div data-reveal="left" data-reveal-delay="1" data-reveal-ease="smooth">
-          <Card variant="elevated" padding="lg" class="h-full flex flex-col justify-center">
-            <div class="flex items-center gap-3 pb-4 mb-4 border-b border-border">
-              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-                <Icon name="zap" size="md" />
-              </div>
-              <h3 class="font-display text-base font-semibold text-foreground">What's included</h3>
-            </div>
-            <ul class="flex flex-col gap-3">
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Core Web Vitals</span> — LCP, INP, and CLS held to Google's thresholds. Measured on real devices, not just synthetic tests.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Image pipeline</span> — modern formats, responsive sizes, lazy loading. Hero images art-directed so they look right on every screen.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Technical SEO</span> — metadata, sitemaps, structured data, OG images. All wired up and validated before the first crawl.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Accessibility</span> — WCAG-aware markup and verified focus order. Tested with a screen reader and the keyboard alone, not just a contrast checker.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Lighthouse audits</span> — measurable scores delivered with the site. Repeatable in CI so they don't quietly drift after launch.
-                </p>
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
-                <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Privacy-friendly analytics</span> — useful data, no cookie banner. Self-hosted or vendor-anonymised, never sold on.
-                </p>
-              </li>
-            </ul>
-          </Card>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="py-[var(--space-section-md)] bg-background border-t border-border">
+  <!-- How to Start -->
+  <section class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
     <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
       <div class="flex flex-col items-center gap-4 text-center" data-reveal>
         <div class="flex flex-col items-center gap-6">
           <Badge variant="brand" pill>How it works</Badge>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-            A clear, honest process
+            How to start
           </h2>
         </div>
         <p class="text-lg text-foreground-muted max-w-2xl mx-auto text-balance">
-          Four stages, one point of contact, no surprises.
+          Three steps. No pitch, no long sales process.
         </p>
       </div>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-6 sm:grid-cols-3">
         <Card hover data-reveal>
           <div class="flex items-start gap-4">
             <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 font-bold text-base shrink-0">
               1
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Discovery</h3>
+              <h3 class="text-base font-semibold text-foreground">Discovery call</h3>
               <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                A conversation about your goals, your audience, and what success looks like. No obligation.
+                30 minutes. You describe your situation; I ask about the technical landscape. No obligation — this call tells both of us whether there's a fit.
               </p>
             </div>
           </div>
@@ -315,7 +343,7 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
             <div class="flex-1 min-w-0">
               <h3 class="text-base font-semibold text-foreground">Proposal</h3>
               <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                A clear scope, timeline, and cost. One page, plain language, fixed price.
+                If there's a fit: a tailored diagnostic scope within 48 hours. Fixed price, clear deliverables, defined timeline. No surprises.
               </p>
             </div>
           </div>
@@ -326,22 +354,9 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
               3
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Design & Build</h3>
+              <h3 class="text-base font-semibold text-foreground">Sprint starts</h3>
               <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                Short cycles with regular check-ins. You see the site evolve as it's built.
-              </p>
-            </div>
-          </div>
-        </Card>
-        <Card hover data-reveal data-reveal-delay="3">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 font-bold text-base shrink-0">
-              4
-            </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Launch & Support</h3>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                Deploy, hand over, stay available. Iteration after launch is straightforward.
+                Diagnostic begins within two weeks of signature. From there, most engagements move into an ongoing retainer shaped around what you actually need.
               </p>
             </div>
           </div>
@@ -351,19 +366,18 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
   </section>
 
   <!-- CTA -->
-  <section class="relative z-10 py-[var(--space-section-md)] bg-background-secondary border-t border-border">
-    <!-- Mobile: flat section, no card -->
+  <section class="relative z-10 py-[var(--space-section-md)] bg-background border-t border-border">
     <div class="glitch:hidden mx-auto max-w-2xl px-6 text-center" data-reveal>
       <Badge variant="brand" pill class="mb-6">Let's talk</Badge>
       <h2 class="font-display text-4xl font-bold text-foreground mb-4 text-balance">
-        Have a project in mind?
+        Sound like a fit?
       </h2>
       <p class="text-lg text-foreground-muted mb-8 text-balance">
-        Send a short note about what you're building and what you need. I read every message and reply within a working day.
+        Start with a 30-minute discovery call. I read every message and reply within a working day.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <Button size="lg" href="/contact" class="cta-btn-brand">
-          Start a project
+          Book a discovery call
           <Icon name="arrow-right" size="sm" />
         </Button>
         <Button size="lg" variant="outline" href="/about">
@@ -373,17 +387,16 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
       </div>
     </div>
 
-    <!-- Desktop: contained LetterGlitch band with glass card -->
     <LetterGlitchBand>
       <h2 class="font-display text-4xl font-bold text-foreground mb-4 text-balance">
-        Have a project in mind?
+        Sound like a fit?
       </h2>
       <p class="text-lg text-foreground-muted mb-8 text-balance">
-        Send a short note about what you're building and what you need. I read every message and reply within a working day.
+        Start with a 30-minute discovery call. I read every message and reply within a working day.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <Button size="lg" href="/contact" class="hero-btn-brand">
-          Start a project
+          Book a discovery call
           <Icon name="arrow-right" size="sm" />
         </Button>
         <Button size="lg" variant="outline" href="/about">
@@ -396,9 +409,5 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 </PageLayout>
 
 <style is:global>
-  /* Page-local override: anchor links on /services should land the
-     section's coloured edge flush against the fixed header. */
   html { scroll-padding-top: 4rem; }
-  @media (max-height: 600px) { html { scroll-padding-top: 4rem; } }
-  @media (min-width: 1024px) { html { scroll-padding-top: 4rem; } }
 </style>
